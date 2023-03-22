@@ -3,34 +3,19 @@ import { Inter } from 'next/font/google'
 import Image from 'next/image'
 import avatar from '../public/avatar1.png'
 import logo from '../public/logo.png'
-import work1 from '../public/coachhub.png'
 import javascript from "../public/javascript.png"
 import react from "../public/react.png"
 import typescript from "../public/typescript.png"
 import html5 from "../public/html5.png"
 import node from "../public/node.png"
 import link from "../public/link.png"
-
+import SkillBar from '@/components/SkillBar'
+import MoreSkills from '@/components/MoreSkills'
+import IntroText from '@/components/IntroText'
+import { useTrail, animated } from '@react-spring/web'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const additionalSkills = [
-  "Angular",
-  "Redux",
-  "NestJS",
-  "Salesforce LWC",
-  "Git",
-  "REST",
-  "GraphQL",
-  "Apollo",
-  "SQL",
-  "Postgres",
-  "PHP",
-  "Ruby on Rails",
-  "SolidJS",
-  "Jest",
-  "Vitest"
-];
 
 export default function Home() {
   return (
@@ -57,14 +42,7 @@ export default function Home() {
         </header>
         <main className='p-4'>
           <div className='flex items-center mt-8'>
-            <div className='flex-1'>
-              <h1 className="font-semibold text-7xl">
-                Hi my name is <br />
-                <span className='text-white'>Sharlon Balbalosa</span>
-                <br />a <span className="text-white">JavaScript Developer</span>
-              </h1>
-              <button className='px-4 py-2 mt-8 font-bold text-white bg-red-500 rounded-lg shadow hover:bg-red-600'>Lets Talk</button>
-            </div>
+            <IntroText />
             <div className='relative h-60 w-60'>
               <Image
                 className='inline-block rounded-full h-52 w-52 ring-2 ring-white'
@@ -97,9 +75,7 @@ export default function Home() {
                     <span className="text-lg font-semibold text-white">JavaScript</span>
                     <span className="px-2 py-1 bg-gray-600 rounded-lg text-md text-white font-medium min-w-[46px] text-center">12+ YRS</span>
                   </div>
-                  <div className="w-full h-4 mt-2 mb-6 bg-black rounded-md">
-                    <div className="h-2 bg-gray-600 rounded" style={{ width: '100%' }} />
-                  </div>
+                  <SkillBar from={0} to={100} />
                 </div>
               </div>
               <div className="flex flex-row">
@@ -115,9 +91,7 @@ export default function Home() {
                     <span className="text-lg font-semibold text-white">HTML/CSS</span>
                     <span className="px-2 py-1 bg-gray-600 rounded-lg text-md text-white font-medium min-w-[46px] text-center">12+ YRS</span>
                   </div>
-                  <div className="w-full h-4 mt-2 mb-6 bg-black rounded-md">
-                    <div className="h-2 bg-gray-600 rounded" style={{ width: '100%' }} />
-                  </div>
+                  <SkillBar from={0} to={100} />
                 </div>
               </div>
               <div className="flex flex-row">
@@ -133,9 +107,7 @@ export default function Home() {
                     <span className="text-lg font-semibold text-white">React</span>
                     <span className="px-2 py-1 bg-gray-600 rounded-lg text-md text-white font-medium min-w-[46px] text-center">7 YRS</span>
                   </div>
-                  <div className="w-full h-4 mt-2 mb-6 bg-black rounded-md">
-                    <div className="h-2 bg-gray-600 rounded" style={{ width: '80%' }} />
-                  </div>
+                  <SkillBar from={0} to={80} />
                 </div>
               </div>
               <div className="flex flex-row">
@@ -151,9 +123,7 @@ export default function Home() {
                     <span className="text-lg font-semibold text-white">TypeScript</span>
                     <span className="px-2 py-1 bg-gray-600 rounded-lg text-md text-white font-medium min-w-[46px] text-center">5 YRS</span>
                   </div>
-                  <div className="w-full h-4 mt-2 mb-6 bg-black rounded-md">
-                    <div className="h-2 bg-gray-600 rounded" style={{ width: '70%' }} />
-                  </div>
+                  <SkillBar from={0} to={70} />
                 </div>
               </div>
               <div className="flex flex-row">
@@ -169,18 +139,10 @@ export default function Home() {
                     <span className="text-lg font-semibold text-white">NodeJS</span>
                     <span className="px-2 py-1 bg-gray-600 rounded-lg text-md text-white font-medium min-w-[46px] text-center">4 YRS</span>
                   </div>
-                  <div className="w-full h-4 mt-2 mb-6 bg-black rounded-md">
-                    <div className="h-2 bg-gray-600 rounded" style={{ width: '65%' }} />
-                  </div>
+                  <SkillBar from={0} to={65} />
                 </div>
               </div>
-              <div className="flex flex-wrap w-full gap-4 mt-4">
-                {additionalSkills.map((skill, index) => (
-                  <div key={index} className="p-4 font-bold text-white bg-gray-900 rounded-sm">
-                    {skill}
-                  </div>
-                ))}
-              </div>
+              <MoreSkills />
             </div>
           </div>
           <div className='mt-32'>
@@ -188,7 +150,7 @@ export default function Home() {
               Top Experience
             </h1>
             <div className="flex justify-around mt-8">
-              <div className="relative flex flex-col pt-8 pl-4 text-white border-2 rounded-lg cursor-pointer mt h-60 w-60" style={{
+              <div className="relative flex flex-col pt-8 pl-4 text-white border-4 rounded-lg cursor-pointer mt h-60 w-60" style={{
                 borderColor: "#f1583e"
               }}>
                 <h4 className="text-2xl font-semibold underline">CoachHub</h4>
@@ -198,7 +160,7 @@ export default function Home() {
                 >1 YR</div>
                 <Image src={link} className="absolute bg-white right-4 bottom-4" alt="link image" />
               </div>
-              <div className="relative flex flex-col pt-8 pl-4 text-white border-2 border-white rounded-lg mt h-60 w-60" style={{
+              <div className="relative flex flex-col pt-8 pl-4 text-white border-4 border-white rounded-lg mt h-60 w-60" style={{
                 borderColor: "#86bc25"
               }}>
                 <h4 className="text-2xl font-semibold underline">Deloitte</h4>
@@ -208,7 +170,7 @@ export default function Home() {
                 >4 YRS</div>
                 <Image src={link} className="absolute bg-white right-4 bottom-4" alt="link image" />
               </div>
-              <div className="relative flex flex-col pt-8 pl-4 text-white border-2 border-white rounded-lg mt h-60 w-60" style={{
+              <div className="relative flex flex-col pt-8 pl-4 text-white border-4 border-white rounded-lg mt h-60 w-60" style={{
                 borderColor: "#00264a"
               }}>
                 <h4 className="text-2xl font-semibold underline">Deltek</h4>
@@ -235,7 +197,7 @@ export default function Home() {
         </main>
 
         {/* <footer className="p-4">Footer</footer> */}
-      </div>
+      </div >
       <footer className="flex items-center justify-center w-full min-h-screen mt-32 bg-black">
         <div className="flex flex-col w-full px-4 text-white md:w-2/3">
           <div className="w-full font-bold text-7xl">
