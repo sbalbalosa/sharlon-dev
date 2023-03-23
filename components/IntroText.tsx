@@ -13,7 +13,7 @@ export default function IntroText() {
                 <animated.span className='text-white' style={{ ...trail[1] }}>Sharlon Balbalosa</animated.span>
                 <br /><animated.span style={{ ...trail[2] }}>a <span className="text-white">JavaScript Developer</span></animated.span>
             </h1>
-            <animated.button className='px-8 py-2 mt-8 text-xl font-bold text-white bg-red-500 rounded-lg shadow hover:bg-red-600' style={{ ...trail[3] }}>Lets Talk</animated.button>
+            <animated.button className='px-8 py-2 mt-8 text-xl font-bold text-white bg-red-500 rounded-lg shadow hover:bg-red-600' style={{ ...trail[3] }}>Let&#39;s Talk</animated.button>
         </div>
     )
 }

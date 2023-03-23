@@ -142,70 +142,71 @@ export default function Home() {
                   <SkillBar from={0} to={65} />
                 </div>
               </div>
+              <h3 className="mt-4 text-2xl font-semibold text-white">And more...</h3>
               <MoreSkills />
             </div>
           </div>
-          <div className='mt-32'>
+          <div className='mt-24'>
             <h1 className="text-3xl font-semibold text-white">
               Top Experience
             </h1>
             <div className="flex justify-around mt-8">
-              <div className="relative flex flex-col pt-8 pl-4 text-white border-4 rounded-lg cursor-pointer mt h-60 w-60" style={{
-                borderColor: "#f1583e"
-              }}>
-                <h4 className="text-2xl font-semibold underline">CoachHub</h4>
-                <p>Senior Full Stack Developer</p>
-                <div
-                  className="absolute px-4 py-2 text-xl font-semibold text-white bg-gray-700 rounded-lg -left-8 bottom-8"
-                >1 YR</div>
-                <Image src={link} className="absolute bg-white right-4 bottom-4" alt="link image" />
-              </div>
-              <div className="relative flex flex-col pt-8 pl-4 text-white border-4 border-white rounded-lg mt h-60 w-60" style={{
-                borderColor: "#86bc25"
-              }}>
-                <h4 className="text-2xl font-semibold underline">Deloitte</h4>
-                <p>Senior Frontend Developer</p>
-                <div
-                  className="absolute px-4 py-2 text-xl font-semibold text-white bg-gray-700 rounded-lg -left-8 bottom-8"
-                >4 YRS</div>
-                <Image src={link} className="absolute bg-white right-4 bottom-4" alt="link image" />
-              </div>
-              <div className="relative flex flex-col pt-8 pl-4 text-white border-4 border-white rounded-lg mt h-60 w-60" style={{
-                borderColor: "#00264a"
-              }}>
-                <h4 className="text-2xl font-semibold underline">Deltek</h4>
-                <p>Senior Frontend Developer</p>
-                <div
-                  className="absolute px-4 py-2 text-xl font-semibold text-white bg-gray-700 rounded-lg -left-8 bottom-8"
-                >5 YRS</div>
-                <Image src={link} className="absolute bg-white right-4 bottom-4" alt="link image" />
-              </div>
+              <a href="https://www.coachhub.com/" title='CoachHub website' target="_blank">
+                <div className="relative flex flex-col pt-8 pl-4 text-white border-4 rounded-lg cursor-pointer w-72 h-72" style={{
+                  borderColor: "#f1583e"
+                }}>
+                  <h4 className="text-2xl font-semibold underline">CoachHub</h4>
+                  <p>Senior Full Stack Developer</p>
+                  <div
+                    className="absolute px-4 py-2 text-xl font-semibold text-white bg-gray-700 rounded-lg -left-8 bottom-8"
+                  >1 YR</div>
+                  <Image src={link} className="absolute bg-white right-4 bottom-4" alt="link image" />
+                </div></a>
+              <a href="https://www2.deloitte.com/ph/en.html" title="Deloitte website" target="_blank">
+                <div className="relative flex flex-col pt-8 pl-4 text-white border-4 rounded-lg cursor-pointer w-72 h-72" style={{
+                  borderColor: "#86bc25"
+                }}>
+                  <h4 className="text-2xl font-semibold underline">Deloitte</h4>
+                  <p>Senior Frontend Developer</p>
+                  <div
+                    className="absolute px-4 py-2 text-xl font-semibold text-white bg-gray-700 rounded-lg -left-8 bottom-8"
+                  >4 YRS</div>
+                  <Image src={link} className="absolute bg-white right-4 bottom-4" alt="link image" />
+                </div></a>
+              <a href="https://www.deltek.com/en" target="_blank" title="Deltek website">
+                <div className="relative flex flex-col pt-8 pl-4 text-white border-4 rounded-lg cursor-pointer w-72 h-72" style={{
+                  borderColor: "#00264a"
+                }}>
+                  <h4 className="text-2xl font-semibold underline">Deltek</h4>
+                  <p>Senior Frontend Developer</p>
+                  <div
+                    className="absolute px-4 py-2 text-xl font-semibold text-white bg-gray-700 rounded-lg -left-8 bottom-8"
+                  >5 YRS</div>
+                  <Image src={link} className="absolute bg-white right-4 bottom-4" alt="link image" />
+                </div></a>
             </div>
           </div>
-          <div className='mt-32'>
+          <div className='mt-24'>
             <h1 className="text-3xl font-semibold text-white">
               Open Source
             </h1>
-            <div className="relative flex justify-around mt-8">
-              <div className="flex flex-col w-full pt-8 pl-4 text-white bg-gray-900 border-2 border-gray-600 rounded-lg mt">
-                <h4 className="text-2xl font-semibold underline">CoachHub</h4>
-                <p>Senior Full Stack Developer</p>
-                <Image src={link} className="absolute bg-white right-4 bottom-4" alt="link image" />
+            <div className="relative flex items-center mt-8">
+              <div className="flex flex-col w-full px-8 py-4 text-white bg-gray-900 border-2 border-gray-600 rounded-lg mt">
+                <h4 className="mb-2 text-2xl font-semibold underline">Yomi</h4>
+                <p>Open source TypeScript project to help with creation, validation and encryption of GunJS data thru the use of class and decorators.</p>
               </div>
             </div>
           </div>
         </main>
-
-        {/* <footer className="p-4">Footer</footer> */}
       </div >
-      <footer className="flex items-center justify-center w-full min-h-screen mt-32 bg-black">
+      <footer className="flex items-center justify-center w-full min-h-screen mt-24 bg-black ">
         <div className="flex flex-col w-full px-4 text-white md:w-2/3">
           <div className="w-full font-bold text-7xl">
             <h1 className="w-full md:w-2/3">How can I help you? Get
               in touch</h1>
           </div>
           <div className="flex flex-col mt-8 md:flex-row md:justify-between">
-            <p className="w-full text-gray-400 md:w-2/3">To ensure that all Wikipedia content is verifiable, anyone may question an uncited claim. If your work has been tagged</p>
+            <p className="w-full text-gray-400 md:w-2/3">This site is built on React and NextJS v13 using React Spring for the animations.</p>
             <div className="pt-6 w-44 md:pt-0">
               <a className="flex items-center justify-center px-10 py-3 text-center bg-red-500 rounded-lg shadow">Contact US</a>
             </div>
@@ -242,12 +243,12 @@ export default function Home() {
               </div>
             </div>
             <hr className="border-gray-600" />
-            <p className="w-full my-12 text-center text-gray-600">Copyright © 2023 Sharlon Balbalosa</p>
+            <p className="w-full my-12 text-center text-gray-600">
+              Copyright © 2023 Sharlon Balbalosa
+            </p>
           </div>
         </div>
       </footer>
-
-
     </>
   )
 }

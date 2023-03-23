@@ -13,7 +13,7 @@ export default function SkillBar({ from, to }: Props) {
         to: { width: toPercent(to) },
     }))
 
-    return (< div className="w-full h-4 mt-2 mb-6 bg-black rounded-md" >
-        <animated.div ref={ref} className="h-2 bg-green-500 rounded" style={springs} />
-    </div >)
+    return (
+        <animated.div ref={ref} className="h-2 mt-2 bg-green-500 rounded" style={springs} />
+    )
 }
