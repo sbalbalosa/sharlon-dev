@@ -1,4 +1,5 @@
 import { animated, useTrail } from "@react-spring/web"
+import DownloadButton from "./DownloadButton"
 
 export default function IntroText() {
     const trail = useTrail(4, {
@@ -13,7 +14,9 @@ export default function IntroText() {
                 <animated.span className='text-white' style={{ ...trail[1] }}>Sharlon Balbalosa</animated.span>
                 <br /><animated.span style={{ ...trail[2] }}>a <span className="text-white">JavaScript Developer</span></animated.span>
             </h1>
-            <animated.a className='w-1/4 py-2 text-xl font-bold text-center text-white bg-red-500 rounded-lg shadow hover:bg-red-600' style={{ ...trail[3] }} href="mailto:sbalbalosa@gmail.com">Let&#39;s Talk</animated.a>
+            <animated.div className='w-1/4' style={{ ...trail[3] }}>
+                <DownloadButton />
+            </animated.div>
         </div>
     )
 }

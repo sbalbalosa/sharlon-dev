@@ -1,4 +1,5 @@
 import Logo from "./Logo"
+import DownloadButton from "./DownloadButton"
 
 export default function Footer() {
     return (
@@ -11,7 +12,7 @@ export default function Footer() {
           <div className="flex flex-col mt-8 md:flex-row md:justify-between">
             <p className="w-full text-gray-400 md:w-2/3">This site is built on React and NextJS v13 using React Spring for the animations.</p>
             <div className="pt-6 w-44 md:pt-0">
-              <a className="flex items-center justify-center px-10 py-3 text-center bg-red-500 rounded-lg shadow">Let&apos;s talk</a>
+            <DownloadButton />
             </div>
           </div>
           <div className="flex flex-col">
@@ -24,7 +25,7 @@ export default function Footer() {
             </div>
             <hr className="border-gray-600" />
             <p className="w-full my-12 text-center text-gray-600">
-              Copyright © 2023 Sharlon Balbalosa
+              Copyright © {(new Date()).getFullYear()} Sharlon Balbalosa
             </p>
           </div>
         </div>
