@@ -27,12 +27,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`max-w-screen-lg min-h-screen mx-auto ${inter.className}`}>
-        <header className='flex flex-col items-center justify-between gap-4 p-4'>
+        <header className='flex flex-col items-center justify-between gap-4 p-4 md:flex-row'>
           <Logo />
           <a className="text-gray-600 uppercase cursor-pointer hover:text-white" href="mailto:sbalbalosa@gmail.com" title="sbalbalos@gmail.com">sbalbalosa@gmail.com</a>
         </header>
         <main className='px-4'>
-          <div className='flex flex-col items-center'>
+          <div className='flex flex-col items-center md:flex-row md:py-8'>
             <IntroText />
             <div className='relative mt-12 h-60 w-60'>
               <Image
@@ -141,7 +141,7 @@ export default function Home() {
             <h1 className="text-3xl font-semibold text-white">
               Top Experience
             </h1>
-            <div className="flex flex-col items-center gap-4 mt-8">
+            <div className="flex flex-col items-center gap-4 mt-8 md:flex-row md:justify-around">
               <a href="https://www.coachhub.com/" title='CoachHub website' target="_blank">
                 <div className="relative flex flex-col pt-8 pl-4 text-white border-4 rounded-lg cursor-pointer w-72 h-72" style={{
                   borderColor: "#f1583e"

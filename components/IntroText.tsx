@@ -9,7 +9,7 @@ export default function IntroText() {
     })
     return (
         <div className='flex flex-col items-center flex-1 gap-8'>
-            <h1 className="text-5xl font-semibold">
+            <h1 className="text-5xl font-semibold md:text-7xl">
                 <animated.span style={{ ...trail[0] }}> Hi my name is</animated.span> <br />
                 <animated.span className='text-white' style={{ ...trail[1] }}>Sharlon Balbalosa</animated.span>
                 <br /><animated.span style={{ ...trail[2] }}>a <span className="text-white">JavaScript Developer</span></animated.span>

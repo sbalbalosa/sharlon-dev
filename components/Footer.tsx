@@ -16,8 +16,8 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="flex flex-col items-center justify-between gap-4 mt-24 mb-12">
-            <Logo />
+            <div className="flex flex-col items-center justify-between gap-4 mt-24 mb-12 md:flex-row">
+              <Logo />
               <a className="text-gray-600 uppercase cursor-pointer hover:text-white" href="mailto:sbalbalosa@gmail.com" title="sbalbalos@gmail.com">sbalbalosa@gmail.com</a>
               <a className="text-gray-600 uppercase cursor-pointer hover:text-white" href="https://www.linkedin.com/in/balbalosasharlon" target="_blank">Linkedin</a>
               <a className="text-gray-600 uppercase cursor-pointer hover:text-white" href="https://github.com/sbalbalosa" target="_blank">Github</a>
