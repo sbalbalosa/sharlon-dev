@@ -27,14 +27,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`max-w-screen-lg min-h-screen mx-auto ${inter.className}`}>
-        <header className='flex items-center justify-between p-4 '>
+        <header className='flex flex-col items-center justify-between gap-4 p-4'>
           <Logo />
-          <a className="hidden text-gray-600 uppercase cursor-pointer md:block hover:text-white" href="mailto:sbalbalosa@gmail.com" title="sbalbalos@gmail.com">sbalbalosa@gmail.com</a>
+          <a className="text-gray-600 uppercase cursor-pointer hover:text-white" href="mailto:sbalbalosa@gmail.com" title="sbalbalos@gmail.com">sbalbalosa@gmail.com</a>
         </header>
-        <main className='p-4'>
-          <div className='flex items-center mt-8'>
+        <main className='px-4'>
+          <div className='flex flex-col items-center'>
             <IntroText />
-            <div className='relative h-60 w-60'>
+            <div className='relative mt-12 h-60 w-60'>
               <Image
                 className='inline-block rounded-full h-52 w-52 ring-2 ring-white'
                 src={avatar}
@@ -48,7 +48,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className='mt-32'>
+          <div className='mt-8'>
             <h1 className="text-3xl font-semibold text-white">
               Technologies
             </h1>
@@ -141,7 +141,7 @@ export default function Home() {
             <h1 className="text-3xl font-semibold text-white">
               Top Experience
             </h1>
-            <div className="flex justify-around mt-8">
+            <div className="flex flex-col items-center gap-4 mt-8">
               <a href="https://www.coachhub.com/" title='CoachHub website' target="_blank">
                 <div className="relative flex flex-col pt-8 pl-4 text-white border-4 rounded-lg cursor-pointer w-72 h-72" style={{
                   borderColor: "#f1583e"

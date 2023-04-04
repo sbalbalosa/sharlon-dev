@@ -16,12 +16,12 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="flex flex-row items-center justify-between mt-24 mb-12">
+            <div className="flex flex-col items-center justify-between gap-4 mt-24 mb-12">
             <Logo />
-              <a className="hidden text-gray-600 uppercase cursor-pointer md:block hover:text-white" href="mailto:sbalbalosa@gmail.com" title="sbalbalos@gmail.com">sbalbalosa@gmail.com</a>
-              <a className="hidden text-gray-600 uppercase cursor-pointer md:block hover:text-white" href="https://www.linkedin.com/in/balbalosasharlon" target="_blank">Linkedin</a>
-              <a className="hidden text-gray-600 uppercase cursor-pointer md:block hover:text-white" href="https://github.com/sbalbalosa" target="_blank">Github</a>
-              <a className="hidden text-gray-600 uppercase cursor-pointer md:block hover:text-white" href="https://twitter.com/sbalbalosa" target="_blank">Twitter</a>
+              <a className="text-gray-600 uppercase cursor-pointer hover:text-white" href="mailto:sbalbalosa@gmail.com" title="sbalbalos@gmail.com">sbalbalosa@gmail.com</a>
+              <a className="text-gray-600 uppercase cursor-pointer hover:text-white" href="https://www.linkedin.com/in/balbalosasharlon" target="_blank">Linkedin</a>
+              <a className="text-gray-600 uppercase cursor-pointer hover:text-white" href="https://github.com/sbalbalosa" target="_blank">Github</a>
+              <a className="text-gray-600 uppercase cursor-pointer hover:text-white" href="https://twitter.com/sbalbalosa" target="_blank">Twitter</a>
             </div>
             <hr className="border-gray-600" />
             <p className="w-full my-12 text-center text-gray-600">
